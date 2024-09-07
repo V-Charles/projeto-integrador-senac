@@ -2,10 +2,15 @@
 package services;
 
 import entities.Morador;
+import enums.AreaLazer;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 public class Administracao {
+    
+    private Map<String, Date> reservas;
     
     private List<Morador> listaMoradores;
     
@@ -27,5 +32,18 @@ public class Administracao {
         for(Morador morador : listaMoradores){
             System.out.println(morador.getNome());
         }
+    }
+    
+    public boolean fazReserva(AreaLazer area, Date data){
+        String chave = area.name() + data.toString();
+        if(reservas.containsKey(chave)){
+            return false;
+        }
+        reservas.put(chave, data);
+        return true;
+    }
+    
+    public Map<String, Date> getReservas(){
+        return reservas;
     }
 }
