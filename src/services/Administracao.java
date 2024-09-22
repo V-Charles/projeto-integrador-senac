@@ -5,12 +5,13 @@ import entities.Morador;
 import enums.AreaLazer;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Administracao {
     
-    private Map<String, Date> reservas;
+    private Map<String, Date> reservas = new HashMap<>();
     
     private List<Morador> listaMoradores;
     
@@ -35,7 +36,7 @@ public class Administracao {
     }
     
     public boolean fazReserva(AreaLazer area, Date data){
-        String chave = area.name() + data.toString();
+        String chave = area.name() + " " + data.toString();
         if(reservas.containsKey(chave)){
             return false;
         }

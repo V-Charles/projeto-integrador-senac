@@ -1,11 +1,10 @@
-
 package enums;
 
 public enum AreaLazer {
     
     ACADEMIA("Academia"),
     QUADRA_VOLEI("Quadra de vôlei"),
-    QUADRA_FUTEBOL("Quara de futebol"),
+    QUADRA_FUTEBOL("Quadra de futebol"),
     PISCINA("Piscina"),
     SALAO_FESTA("Salão de festas");
     
