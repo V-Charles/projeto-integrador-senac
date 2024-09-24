@@ -3,15 +3,16 @@ package services;
 
 import entities.Empregada;
 import entities.PrestadorServico;
+import entities.Visita;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Portaria {
     
-    Date dataVisita = new Date();
     private List<Empregada> listaDeEmpregadas = new ArrayList<>();
     private List<PrestadorServico> listaDePrestadores = new ArrayList<>();
+    private List<Visita> listaDeVisitas = new ArrayList<>();
     
     public Portaria(){
     }
@@ -35,6 +36,17 @@ public class Portaria {
     public void listarPrestadores(){
         for(PrestadorServico prestador : listaDePrestadores){
             System.out.println(prestador.getNome());
+        }
+    }
+    
+    public void registraVisita(Visita visita){
+        listaDeVisitas.add(visita);
+        System.out.println("Visita cadastrada com sucesso!");
+    }
+    
+    public void listarVisitas(){
+        for(Visita visita : listaDeVisitas){
+            System.out.println(visita.getNome());
         }
     }
 }
