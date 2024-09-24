@@ -4,6 +4,7 @@ package entities;
 public class Contato {
     
     private String celular;
+    private String celularEmerg;
     private String telFixo;
     private String email;
     private Morador morador;
@@ -11,8 +12,9 @@ public class Contato {
     public Contato(){
     }
 
-    public Contato(String celular, String telFixo, String email, Morador morador) {
+    public Contato(String celular, String celularEmerg, String telFixo, String email, Morador morador) {
         this.celular = celular;
+        this.celularEmerg = celularEmerg;
         this.telFixo = telFixo;
         this.email = email;
         this.morador = morador;
@@ -24,6 +26,14 @@ public class Contato {
 
     public void setCelular(String celular) {
         this.celular = celular;
+    }
+    
+    public String getCelularEmerg() {
+        return celularEmerg;
+    }
+
+    public void setCelularEmerg(String celularEmerg) {
+        this.celularEmerg = celularEmerg;
     }
 
     public String getTelFixo() {

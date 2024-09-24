@@ -13,7 +13,7 @@ public class Visita extends Pessoa{
         super();
     }
     
-    public Visita(String nome, String documento, Date dataNasc) {
-        super(nome, documento, dataNasc);
+    public Visita(String nome, String documento) {
+        super(nome, documento);
     }
 }

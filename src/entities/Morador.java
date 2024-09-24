@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Morador extends Pessoa{
     
+    private Date dataNasc;
     private Contato contato;
     
     private List<Residencia> listaResidencias;
@@ -19,7 +20,8 @@ public class Morador extends Pessoa{
     }
 
     public Morador(Contato contato, String nome, String documento, Date dataNasc) {
-        super(nome, documento, dataNasc);
+        super(nome, documento);
+        this.dataNasc = dataNasc;
         this.contato = contato;
     }
 
@@ -29,5 +31,13 @@ public class Morador extends Pessoa{
 
     public void setContato(Contato contato) {
         this.contato = contato;
+    }
+    
+        public Date getDataNasc() {
+        return dataNasc;
+    }
+
+    public void setDataNasc(Date dataNasc) {
+        this.dataNasc = dataNasc;
     }
 }

@@ -1,21 +1,17 @@
 
 package entities;
 
-import java.util.Date;
-
 public class Pessoa {
     
     private String nome;
     private String documento;
-    private Date dataNasc;
     
     public Pessoa(){
     }
 
-    public Pessoa(String nome, String documento, Date dataNasc) {
+    public Pessoa(String nome, String documento) {
         this.nome = nome;
         this.documento = documento;
-        this.dataNasc = dataNasc;
     }
 
     public String getNome() {
@@ -32,13 +28,5 @@ public class Pessoa {
 
     public void setDocumento(String documento) {
         this.documento = documento;
-    }
-
-    public Date getDataNasc() {
-        return dataNasc;
-    }
-
-    public void setDataNasc(Date dataNasc) {
-        this.dataNasc = dataNasc;
     }
 }
