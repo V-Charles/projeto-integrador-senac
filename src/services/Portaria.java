@@ -1,11 +1,9 @@
-
 package services;
 
 import entities.Empregada;
 import entities.PrestadorServico;
 import entities.Visita;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Portaria {
